@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Aplicacion de seguimiento usando Ipify y Leaflet">
+   <meta name="keywords" content="HTML5, CSS3, Javascript, Leaflet, Ipify">
+   <meta name="author" content="Richard Quintero">
+
+   <title>IPTracker</title>
+
+   <!-- CSS Leaflet -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+   integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+   crossorigin=""/>
+   <!-- FontAwesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- CSS Minimap Leaflet -->
+   <link rel="stylesheet" href="Leaflet-MiniMap-master/Leaflet-MiniMap-master/dist/Control.MiniMap.min.css">
+   <!-- Sweet Alert -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <!-- CSS Styles -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+   <header id="header">
+      <h1 class="titulo">Bienvenidos a IPTracker, tu aplicación de seguimiento preferida</h1>
+   </header>
+   
+   <main class="contenedor">
+      <section class="btn-theme">
+         <button class="btn" id="switch-theme"></button>
+      </section>
+      <section class="filtros">
+         <h2>Buscar por:</h2>
+         <div>
+            <button class="btn" id="btnIp" class="btnFilter">Ip</button>
+            <button class="btn" id="btnDomain" class="btnFilter">Dominio</button>
+         </div>
+      </section>
+
+      <section class="contenedor-ejemplos">
+         <h2>Ip de ejemplo:</h2>
+         <p>200.8.113.234</p>
+         <p>192.168.0.1</p>
+      </section>
+
+      <section class="seeker">
+         <form id="form">
+            <label for="ip">Buscar dirección por Ip</label>
+            <input type="text" id="ip" class="buscador" name="ip" placeholder="Ejemplo: 200.8.113.234" autofocus>
+            <button class="btn btnForm" id="sendIp">Buscar</button>
+         </form>
+      </section>
+      <section id="map">
+         <div class="lds-ellipsis loader" id="loader"><div></div><div></div><div></div><div></div></div>
+      </section>
+      <a class="btn" id="toGithub" href="https://github.com/Zeromike198/IPTracker" target="_blank"><i class="fa-brands fa-github pt-2"></i></a>
+   </main>
+
+   <footer>
+      <h3>Copyrigth ©️ 2025 IPTracker | Todos los derechos reservados</h3>
+   </footer>
+
+   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+   integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+   crossorigin=""></script>
+   <script src="Leaflet-MiniMap-master/Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>
+   <script src="index.js"></script>
+</body>
+</html>
